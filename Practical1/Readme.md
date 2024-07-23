@@ -21,3 +21,12 @@
 
 ![c code for summation](./Images/vsd1.PNG)
 
+## Compile the code using following command
+* riscv64-unknown-elf-gcc -O1 -march=lp64 -march=rv64i -O sum1ton.o sum1ton.c
+
+![compile code](./Images/vsdgcc.PNG)
+
+![](./Images/vsdo1.PNG)
+![](./Images/vsdofast.PNG)
+
+* Successfully Done Here!!
