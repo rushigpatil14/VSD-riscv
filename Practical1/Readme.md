@@ -19,5 +19,5 @@
 
 ## Write a C code for sum of 1 to n numbers
 
-![c code for summation](Practical1\Images\vsd1.PNG)
+![c code for summation](./Images/vsd1.PNG)
 
