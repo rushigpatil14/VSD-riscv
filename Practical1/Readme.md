@@ -14,3 +14,10 @@
 * Processor- 2 CPU
 * Existing hard disk file- donloaded VDI file
 4. Setup Done!
+
+## Testing toolchain using VDI
+
+## Write a C code for sum of 1 to n numbers
+
+![c code for summation](C:\Users\Sagar\Desktop\rushi\vsd_intern\VSD-riscv\Practical1\Images\vsd1.PNG)
+
