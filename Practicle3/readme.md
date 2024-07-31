@@ -19,18 +19,18 @@ R-type instructions are used for register-register operations.
 ``` 
 00f507b3  add	a5,a0,a5
 
-Opcode: 0110011\
-funct3: 000\
-funct7: 0000000\
+Opcode: 0110011
+funct3: 000
+funct7: 0000000
 Binary Encoding: 1111 0101 0000 0111 1011 0011
 ```
 * SUB (Subtraction)
 ```
 40f70733   sub  a4,a4,a5
 
-Opcode: 0110011\
-funct3: 000\
-funct7: 1000000\
+Opcode: 0110011
+funct3: 000
+funct7: 1000000
 Binary Encoding: 0100 0000 1111 0111 0000 0111 0011 0011
 ```
 * AND (Bitwise AND)
