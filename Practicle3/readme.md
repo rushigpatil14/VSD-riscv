@@ -16,14 +16,53 @@ R-type instructions are used for register-register operations.
 
 * ADD (Addition)
 
-   00f507b3  add	a5,a0,a5
+``` 
+00f507b3  add	a5,a0,a5
 
 Opcode: 0110011\
 funct3: 000\
 funct7: 0000000\
 Binary Encoding: 1111 0101 0000 0111 1011 0011
+```
+* SUB (Subtraction)
+```
+40f70733   sub  a4,a4,a5
 
+Opcode: 0110011\
+funct3: 000\
+funct7: 1000000\
+Binary Encoding: 0100 0000 1111 0111 0000 0111 0011 0011
+```
+* AND (Bitwise AND)
+```
+014e7e33    and     t3,t3,s4
 
+Opcode: 0110011
+funct3: 111
+funct7: 0000001
+Binary Encoding: 0001 0100 1110 0111 1110 0011 0011
+```
+ * OR (Bitwise OR)
+ ```
+00c8e8b3       or      a7,a7,a2
+
+Opcode: 0110011
+funct3: 101
+funct7: 0000000
+Binary Encoding: 1100 1000 1110 1000 1011 0011
+ ```
+* XOR (Bitwise XOR)
+
+```
+00f44433       xor     s0,s0,a5
+
+Opcode: 0110011
+funct3: 100
+funct7: 0000000
+Binary Encoding: 1111 0100 0100 0100 0011 0011
+
+```
+ 
 ## I-Type Instructions
 I-type instructions are used for immediate operations, loads, and some ALU operations.
 
