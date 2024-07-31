@@ -12,6 +12,18 @@ R-type instructions are used for register-register operations.
 - `opcode`: Specifies the operation (e.g., 0110011 for integer register-register operations).
 - `funct3` and `funct7`: Further specify the operation (e.g., 000 for ADD).
 
+### Here are some examples of R-type instructions with their funct3 and funct7 values:
+
+* ADD (Addition)
+
+   00f507b3  add	a5,a0,a5
+
+Opcode: 0110011\
+funct3: 000\
+funct7: 0000000\
+Binary Encoding: 1111 0101 0000 0111 1011 0011
+
+
 ## I-Type Instructions
 I-type instructions are used for immediate operations, loads, and some ALU operations.
 
