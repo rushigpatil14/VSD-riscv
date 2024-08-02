@@ -73,6 +73,56 @@ I-type instructions are used for immediate operations, loads, and some ALU opera
 - `opcode`: Specifies the operation (e.g., 0010011 for immediate arithmetic operations).
 - `funct3`: Specifies the operation type (e.g., 000 for ADDI).
 
+### Here are some examples of I-type instructions with their funct3 values:
+
+* ADDI (Add Immediate)
+```
+00878793    addi    a5,a5,8
+
+Opcode: 010011
+funct3: 000
+Description: Adds the immediate value imm to the value in register rs1 and stores the result in register rd.
+
+```
+* SLTI (Set Less Than Immediate)
+```
+Opcode: 0010011
+funct3: 010
+Description: Sets rd to 1 if the value in rs1 is less than the immediate value imm, otherwise sets rd to 0.
+
+```
+* ANDI (Bitwise AND Immediate)
+```
+0017f793    andi    a5,a5,1
+
+Opcode: 010011
+funct3: 111
+Description: Performs a bitwise AND between the value in rs1 and the immediate value imm, storing the result in rd.
+
+```
+* ORI (Bitwise OR Immediate)
+```
+0015e593     ori     a1,a1,1
+
+Opcode: 010011
+funct3: 110
+Description: Performs a bitwise OR between the value in rs1 and the immediate value imm, storing the result in rd.
+```
+* XORI (Bitwise XOR Immediate)
+```
+
+Opcode: 0010011
+funct3: 100
+Description: Performs a bitwise XOR between the value in rs1 and the immediate value imm, storing the result in rd.
+```
+* LW (Load Word)
+```
+0007a783      lw      a5,0(a5)
+
+Opcode: 000011
+funct3: 111
+Description: Loads a 32-bit word from memory at the address computed by adding the immediate value imm to the value in rs1, and stores the result in rd.
+```
 ## S-Type Instructions
 S-type instructions are used for store operations.
 
@@ -82,6 +132,8 @@ S-type instructions are used for store operations.
 - **SW**: Stores the value in `rs2` to the memory address calculated by adding the immediate `imm` to the base address in `rs1`.
 - `opcode`: Specifies the store operation (e.g., 0100011).
 - `funct3`: Specifies the type of store (e.g., 010 for SW).
+
+
 
 ## B-Type Instructions
 B-type instructions are used for conditional branches.
