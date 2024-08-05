@@ -46,6 +46,7 @@
 
 # RV32I Architecture Diagram
 
+![ RV32I Architecture Diagrem](./Images/rv32i_archi.jpg)
 
 ## Here is a step-by-step breakdown of how these components are connected and interact.
 
@@ -86,3 +87,45 @@
 
 * The PC is updated to point to the next instruction.
 * For branch and jump instructions, the target address is calculated and loaded into the PC
+
+# Installing Verilog 
+
+* Installing Commands
+
+```
+* sudo apt-get update  
+* sudo apt-get install iverilog gtkwave 
+```
+* Execution Commands
+
+```
+  * iverilog -o iiitb_rv32i_1 rv32i/iiitb_rv32i.v rv32i/iiitb_rv32i_tb.v
+  * ./iiitb_rv32i_1
+  ```
+* Gtk wave Command
+```
+gtkwave iiitb_rv32i.vcd
+```
+# Code to be executed
+
+* Commands can be updated in rv32i/iiitb_rv32i.v by storing 32bit hex codes as generated in Practical3 in IMEM stack program memory
+
+```
+always @(posedge RN) begin
+    //NPC<= 32'd0;
+MEM[0] <= 32'h00f507b3;         //add a5,a0,a5.(i1)
+MEM[1] <= 32'h40f70733;         //sub a4,a4,a5.(i2)
+MEM[2] <= 32'h014e7e33;         //and t3,t3,s4.(i3)
+MEM[3] <= 32'h00c8e8b3;         //or a7,a7,a2.(i4)
+MEM[4] <= 32'h00f44433;         //xor s0,s0,a5.(i5)
+MEM[5] <= 32'h02415580;         //slt r11,r2,r4.(i6)
+MEM[6] <= 32'h00520600;         //addi r12,r4,5.(i7)
+MEM[7] <= 32'h00209181;         //sw r3,r1,2.(i8)
+MEM[8] <= 32'h0007a783;         //lw a5,0(a5).(i9)
+MEM[9] <= 32'h00f00002;         //beq r0,r0,15.(i10)
+MEM[25] <= 32'h00210700;         //add r14,r2,r2.(i11)
+end
+```
+# GTKWave Simulation
+
+![ GTK Wave Verification](./Images/vsd_task3_ig101.PNG)
